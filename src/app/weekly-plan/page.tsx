@@ -3,9 +3,9 @@
 import { useAppState } from "@/hooks/useAppState";
 import { AppShell } from "@/components/layout/AppShell";
 import { SetupScreen } from "@/components/layout/SetupScreen";
-import { DashboardPage } from "@/components/dashboard/DashboardPage";
+import { WeeklyPlanPage } from "@/components/training/WeeklyPlanPage";
 
-export default function Home() {
+export default function WeeklyPlanRoute() {
   const { state, isLoaded, isSetup, updatePlayer } = useAppState();
 
   if (!isLoaded) {
@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <AppShell>
-      <DashboardPage state={state} />
+      <WeeklyPlanPage state={state} />
     </AppShell>
   );
 }

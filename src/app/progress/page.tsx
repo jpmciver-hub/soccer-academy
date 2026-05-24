@@ -3,9 +3,9 @@
 import { useAppState } from "@/hooks/useAppState";
 import { AppShell } from "@/components/layout/AppShell";
 import { SetupScreen } from "@/components/layout/SetupScreen";
-import { DashboardPage } from "@/components/dashboard/DashboardPage";
+import { ProgressPage } from "@/components/progress/ProgressPage";
 
-export default function Home() {
+export default function ProgressRoute() {
   const { state, isLoaded, isSetup, updatePlayer } = useAppState();
 
   if (!isLoaded) {
@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <AppShell>
-      <DashboardPage state={state} />
+      <ProgressPage state={state} />
     </AppShell>
   );
 }

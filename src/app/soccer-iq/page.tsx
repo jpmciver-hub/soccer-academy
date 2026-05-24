@@ -3,10 +3,10 @@
 import { useAppState } from "@/hooks/useAppState";
 import { AppShell } from "@/components/layout/AppShell";
 import { SetupScreen } from "@/components/layout/SetupScreen";
-import { DashboardPage } from "@/components/dashboard/DashboardPage";
+import { SoccerIQPage } from "@/components/soccer-iq/SoccerIQPage";
 
-export default function Home() {
-  const { state, isLoaded, isSetup, updatePlayer } = useAppState();
+export default function SoccerIQRoute() {
+  const { isLoaded, isSetup, updatePlayer } = useAppState();
 
   if (!isLoaded) {
     return (
@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <AppShell>
-      <DashboardPage state={state} />
+      <SoccerIQPage />
     </AppShell>
   );
 }
