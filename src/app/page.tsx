@@ -1,20 +1,13 @@
 "use client";
 
+import { ClientOnly } from "@/components/layout/ClientOnly";
 import { useAppState } from "@/hooks/useAppState";
 import { AppShell } from "@/components/layout/AppShell";
 import { SetupScreen } from "@/components/layout/SetupScreen";
 import { DashboardPage } from "@/components/dashboard/DashboardPage";
 
-export default function Home() {
-  const { state, isLoaded, isSetup, updatePlayer } = useAppState();
-
-  if (!isLoaded) {
-    return (
-      <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
-        <div className="animate-pulse text-zinc-500">Loading...</div>
-      </div>
-    );
-  }
+function HomeContent() {
+  const { state, isSetup, updatePlayer } = useAppState();
 
   if (!isSetup) {
     return <SetupScreen onComplete={updatePlayer} />;
@@ -24,5 +17,13 @@ export default function Home() {
     <AppShell>
       <DashboardPage state={state} />
     </AppShell>
+  );
+}
+
+export default function Home() {
+  return (
+    <ClientOnly>
+      <HomeContent />
+    </ClientOnly>
   );
 }

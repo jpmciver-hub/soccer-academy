@@ -1,21 +1,14 @@
 "use client";
 
+import { ClientOnly } from "@/components/layout/ClientOnly";
 import { useAppState } from "@/hooks/useAppState";
 import { AppShell } from "@/components/layout/AppShell";
 import { SetupScreen } from "@/components/layout/SetupScreen";
 import { TouchCounterPage } from "@/components/touch-counter/TouchCounterPage";
 import { TouchCategory } from "@/types";
 
-export default function TouchCounterRoute() {
-  const { state, isLoaded, isSetup, updatePlayer, addTouchLog } = useAppState();
-
-  if (!isLoaded) {
-    return (
-      <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
-        <div className="animate-pulse text-zinc-500">Loading...</div>
-      </div>
-    );
-  }
+function TouchCounterContent() {
+  const { state, isSetup, updatePlayer, addTouchLog } = useAppState();
 
   if (!isSetup) {
     return <SetupScreen onComplete={updatePlayer} />;
@@ -37,5 +30,13 @@ export default function TouchCounterRoute() {
     <AppShell>
       <TouchCounterPage state={state} onSaveTouches={handleSaveTouches} />
     </AppShell>
+  );
+}
+
+export default function TouchCounterRoute() {
+  return (
+    <ClientOnly>
+      <TouchCounterContent />
+    </ClientOnly>
   );
 }
