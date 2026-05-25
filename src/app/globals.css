@@ -129,3 +129,108 @@
   }
 }
 
+@media print {
+  html, body {
+    background: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    color: black;
+    padding: 0.5in;
+    font-size: 11pt;
+    line-height: 1.4;
+  }
+
+  .print-content h1 {
+    font-size: 18pt;
+    font-weight: 700;
+    margin-bottom: 4pt;
+  }
+
+  .print-content h2 {
+    font-size: 14pt;
+    font-weight: 600;
+    margin-bottom: 2pt;
+  }
+
+  .print-content h3 {
+    font-size: 12pt;
+    font-weight: 600;
+    margin-bottom: 2pt;
+  }
+
+  .print-day {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    page-break-inside: avoid;
+  }
+
+  .print-day-header {
+    font-weight: 700;
+    font-size: 11pt;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .print-section {
+    margin-left: 12px;
+    margin-bottom: 4px;
+  }
+
+  .print-section-title {
+    font-weight: 600;
+    font-size: 10pt;
+  }
+
+  .print-drill {
+    font-size: 9pt;
+    color: #555;
+    margin-left: 8px;
+  }
+
+  .print-checkbox {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1.5px solid #999;
+    border-radius: 2px;
+    margin-right: 6px;
+    vertical-align: middle;
+    flex-shrink: 0;
+  }
+
+  .print-notes-box {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 12px;
+    margin-top: 8px;
+    page-break-inside: avoid;
+  }
+
+  .print-notes-lines {
+    border-bottom: 1px solid #e5e5e5;
+    height: 24px;
+  }
+}
+
