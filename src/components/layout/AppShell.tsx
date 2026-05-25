@@ -2,14 +2,36 @@
 
 import { useState } from "react";
 import { Sidebar } from "./Sidebar";
+import { ProfileEntry } from "@/hooks/useProfiles";
 import { Menu } from "lucide-react";
 
-export function AppShell({ children }: { children: React.ReactNode }) {
+interface AppShellProps {
+  children: React.ReactNode;
+  profiles?: ProfileEntry[];
+  activeProfile?: ProfileEntry;
+  onSwitchProfile?: (id: string) => void;
+  onNewProfile?: () => void;
+}
+
+export function AppShell({
+  children,
+  profiles,
+  activeProfile,
+  onSwitchProfile,
+  onNewProfile,
+}: AppShellProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <div className="flex h-screen bg-zinc-950 text-white overflow-hidden">
-      <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <Sidebar
+        open={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+        profiles={profiles}
+        activeProfile={activeProfile}
+        onSwitchProfile={onSwitchProfile}
+        onNewProfile={onNewProfile}
+      />
       <main className="flex-1 overflow-y-auto">
         <div className="sticky top-0 z-30 lg:hidden bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800 px-4 py-3">
           <button
