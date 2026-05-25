@@ -152,7 +152,7 @@ export function useAppState() {
           dayNumber,
           date: new Date().toISOString().split("T")[0],
           completedDrills: [],
-          touchLog: { date: new Date().toISOString().split("T")[0], ballMastery: 0, passing: 0, dribbling: 0, gameTouches: 0, total: 0 },
+          touchLog: { date: new Date().toISOString().split("T")[0], ballMastery: 0, passing: 0, dribbling: 0, juggling: 0, gameTouches: 0, total: 0 },
           notes: "",
         };
         const completedDrills = existing.completedDrills.includes(drillId)

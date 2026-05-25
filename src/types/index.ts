@@ -10,7 +10,7 @@ export type DrillCategory =
   | "positioning"
   | "strength";
 
-export type TouchCategory = "ball-mastery" | "passing" | "dribbling" | "game-touches";
+export type TouchCategory = "ball-mastery" | "passing" | "dribbling" | "juggling" | "game-touches";
 
 export type Phase = 1 | 2 | 3;
 
@@ -73,6 +73,7 @@ export interface TouchLog {
   ballMastery: number;
   passing: number;
   dribbling: number;
+  juggling: number;
   gameTouches: number;
   total: number;
 }

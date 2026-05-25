@@ -17,6 +17,7 @@ const categories: { key: TouchCategory; label: string; icon: string; color: stri
   { key: "ball-mastery", label: "Ball Mastery", icon: "⚽", color: "emerald" },
   { key: "passing", label: "Passing", icon: "🎯", color: "blue" },
   { key: "dribbling", label: "Dribbling", icon: "💨", color: "purple" },
+  { key: "juggling", label: "Juggling", icon: "🤹", color: "rose" },
   { key: "game-touches", label: "Game Touches", icon: "🏟️", color: "amber" },
 ];
 
@@ -24,6 +25,7 @@ const colorClasses: Record<string, { bg: string; text: string; ring: string; pro
   emerald: { bg: "bg-emerald-500/10", text: "text-emerald-400", ring: "ring-emerald-500/30", progress: "bg-emerald-500" },
   blue: { bg: "bg-blue-500/10", text: "text-blue-400", ring: "ring-blue-500/30", progress: "bg-blue-500" },
   purple: { bg: "bg-purple-500/10", text: "text-purple-400", ring: "ring-purple-500/30", progress: "bg-purple-500" },
+  rose: { bg: "bg-rose-500/10", text: "text-rose-400", ring: "ring-rose-500/30", progress: "bg-rose-500" },
   amber: { bg: "bg-amber-500/10", text: "text-amber-400", ring: "ring-amber-500/30", progress: "bg-amber-500" },
 };
 
@@ -35,6 +37,7 @@ export function TouchCounterPage({ state, onSaveTouches }: TouchCounterPageProps
     "ball-mastery": existingLog?.ballMastery || 0,
     passing: existingLog?.passing || 0,
     dribbling: existingLog?.dribbling || 0,
+    juggling: existingLog?.juggling || 0,
     "game-touches": existingLog?.gameTouches || 0,
   });
 
@@ -58,7 +61,7 @@ export function TouchCounterPage({ state, onSaveTouches }: TouchCounterPageProps
   }, [total]);
 
   const resetAll = useCallback(() => {
-    setTouches({ "ball-mastery": 0, passing: 0, dribbling: 0, "game-touches": 0 });
+    setTouches({ "ball-mastery": 0, passing: 0, dribbling: 0, juggling: 0, "game-touches": 0 });
   }, []);
 
   const handleSave = () => {

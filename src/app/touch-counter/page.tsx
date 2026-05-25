@@ -17,6 +17,7 @@ export default function TouchCounterRoute() {
               ballMastery: touches["ball-mastery"],
               passing: touches.passing,
               dribbling: touches.dribbling,
+              juggling: touches.juggling,
               gameTouches: touches["game-touches"],
               total,
             });

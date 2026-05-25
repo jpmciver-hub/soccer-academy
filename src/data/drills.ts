@@ -22,21 +22,21 @@ export const drills: Drill[] = [
   },
   {
     id: "bm-2",
-    name: "Inside-Outside Rolls",
-    description: "Roll the ball across your body with the inside of your foot, then back with the outside. Alternate feet every 10 reps.",
+    name: "Juggling",
+    description: "Keep the ball in the air using feet, thighs, and head. Start with one touch and catch, then build to consecutive juggles. Focus on a soft cushioning touch.",
     coachingPoints: [
-      "Use the sole to guide the ball",
-      "Keep the ball close",
-      "Smooth transitions between inside and outside",
-      "Accelerate as you gain confidence"
+      "Lock your ankle and point toes slightly up",
+      "Strike the bottom third of the ball with your laces",
+      "Keep the ball below head height for control",
+      "Use both feet equally"
     ],
     equipment: ["Ball"],
-    videoUrl: "https://www.youtube.com/watch?v=1oerR4dAtX0",
+    videoUrl: "https://www.youtube.com/watch?v=iVCIG-yir2o",
     category: "ball-mastery",
     difficulty: "beginner",
-    estimatedMinutes: 5,
+    estimatedMinutes: 10,
     positionRelevance: ["RB", "CB", "CDM", "RWB"],
-    touchCount: 150,
+    touchCount: 200,
   },
   {
     id: "bm-3",
