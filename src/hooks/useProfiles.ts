@@ -1,6 +1,7 @@
 "use client";
 
 import { useLocalStorage } from "./useLocalStorage";
+import { useEffect } from "react";
 
 export interface ProfileEntry {
   id: string;
@@ -23,6 +24,33 @@ export function useProfiles() {
     "soccer-academy-profiles",
     defaultIndex
   );
+
+  useEffect(() => {
+    if (!isLoaded) return;
+    if (index.profiles.length > 0) return;
+
+    const oldData = window.localStorage.getItem("soccer-academy-state");
+    if (!oldData) return;
+
+    try {
+      const parsed = JSON.parse(oldData);
+      if (!parsed.player?.name) return;
+
+      const id = `player-${parsed.player.name.toLowerCase().replace(/\s+/g, "-")}-migrated`;
+      const entry: ProfileEntry = {
+        id,
+        name: parsed.player.name,
+        avatarEmoji: parsed.player.avatarEmoji || "⚽",
+      };
+
+      window.localStorage.setItem(`soccer-academy-state-${id}`, oldData);
+      window.localStorage.removeItem("soccer-academy-state");
+
+      setIndex({ activeId: id, profiles: [entry] });
+    } catch {
+      // ignore malformed data
+    }
+  }, [isLoaded, index.profiles.length, setIndex]);
 
   const addProfile = (profile: ProfileEntry) => {
     setIndex((prev) => ({
