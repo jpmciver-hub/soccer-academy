@@ -6,10 +6,10 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { drills, drillCategories } from "@/data/drills";
 import { DrillCategory, DifficultyLevel, Position } from "@/types";
+import { YouTubeEmbed } from "@/components/ui/youtube-embed";
 import {
   Search,
   Clock,
-  ExternalLink,
   ChevronDown,
   ChevronUp,
   Filter,
@@ -214,15 +214,7 @@ export function DrillLibraryPage() {
                       </div>
 
                       {drill.videoUrl && (
-                        <a
-                          href={drill.videoUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-sm text-emerald-400 hover:text-emerald-300 font-medium"
-                        >
-                          <ExternalLink className="h-3.5 w-3.5" />
-                          Watch Demo Video
-                        </a>
+                        <YouTubeEmbed url={drill.videoUrl} title={drill.name} />
                       )}
                     </div>
                   </motion.div>

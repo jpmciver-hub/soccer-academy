@@ -18,8 +18,8 @@ import {
   ChevronLeft,
   ChevronRight,
   Check,
-  ExternalLink,
 } from "lucide-react";
+import { YouTubeEmbed } from "@/components/ui/youtube-embed";
 
 interface TrainingPageProps {
   state: AppState;
@@ -296,15 +296,7 @@ function DrillItem({
                 </div>
               )}
               {videoUrl && (
-                <a
-                  href={videoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs text-emerald-400 hover:text-emerald-300"
-                >
-                  <ExternalLink className="h-3 w-3" />
-                  Watch Demo Video
-                </a>
+                <YouTubeEmbed url={videoUrl} title={name} />
               )}
             </div>
           </motion.div>

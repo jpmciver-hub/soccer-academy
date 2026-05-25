@@ -4,7 +4,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ChevronDown, ChevronUp, PlayCircle, BookOpen } from "lucide-react";
+import { ChevronDown, ChevronUp, BookOpen, PlayCircle } from "lucide-react";
+import { YouTubeEmbed } from "@/components/ui/youtube-embed";
 
 interface Concept {
   id: string;
@@ -252,15 +253,7 @@ export function SoccerIQPage() {
 
                       {concept.videoUrl && (
                         <div className="pt-2">
-                          <a
-                            href={concept.videoUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/10 text-blue-400 hover:bg-blue-500/20 transition-colors text-sm font-medium"
-                          >
-                            <PlayCircle className="h-4 w-4" />
-                            Watch Video Breakdown
-                          </a>
+                          <YouTubeEmbed url={concept.videoUrl} title={concept.title} />
                         </div>
                       )}
                     </div>
