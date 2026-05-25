@@ -13,7 +13,7 @@ export const drills: Drill[] = [
       "Light touches, quick feet"
     ],
     equipment: ["Ball"],
-    videoUrl: "https://www.youtube.com/watch?v=bHYKr8dVMIQ",
+    videoUrl: "https://www.youtube.com/watch?v=KaktBhbJUyg",
     category: "ball-mastery",
     difficulty: "beginner",
     estimatedMinutes: 5,
@@ -31,7 +31,7 @@ export const drills: Drill[] = [
       "Accelerate as you gain confidence"
     ],
     equipment: ["Ball"],
-    videoUrl: "https://www.youtube.com/watch?v=pNeDhPmEEXM",
+    videoUrl: "https://www.youtube.com/watch?v=1oerR4dAtX0",
     category: "ball-mastery",
     difficulty: "beginner",
     estimatedMinutes: 5,
@@ -66,7 +66,7 @@ export const drills: Drill[] = [
       "Accelerate after the turn"
     ],
     equipment: ["Ball", "2 Cones"],
-    videoUrl: "https://www.youtube.com/watch?v=Uc5pCBTmkAI",
+    videoUrl: "https://www.youtube.com/watch?v=LRSUw7mgqAY",
     category: "ball-mastery",
     difficulty: "intermediate",
     estimatedMinutes: 8,
@@ -102,7 +102,7 @@ export const drills: Drill[] = [
       "Alternate feet every 10 passes"
     ],
     equipment: ["Ball", "Wall/Rebounder"],
-    videoUrl: "https://www.youtube.com/watch?v=_yBPUPjLBRo",
+    videoUrl: "https://www.youtube.com/watch?v=LHSJbFE43Xg",
     category: "passing",
     difficulty: "beginner",
     estimatedMinutes: 10,
@@ -155,7 +155,7 @@ export const drills: Drill[] = [
       "Patience — don't dive in"
     ],
     equipment: ["Cones"],
-    videoUrl: "https://www.youtube.com/watch?v=72LUQn6RQBE",
+    videoUrl: "https://www.youtube.com/watch?v=sjHLU8CQkQw",
     category: "defending",
     difficulty: "beginner",
     estimatedMinutes: 8,
@@ -205,7 +205,7 @@ export const drills: Drill[] = [
       "Quality over speed initially"
     ],
     equipment: ["Agility Ladder"],
-    videoUrl: "https://www.youtube.com/watch?v=K2inWAFTaVE",
+    videoUrl: "https://www.youtube.com/watch?v=hlJW5q8s2z0",
     category: "speed",
     difficulty: "beginner",
     estimatedMinutes: 8,
@@ -255,7 +255,7 @@ export const drills: Drill[] = [
       "Already know your next action"
     ],
     equipment: ["Ball", "Wall/Rebounder"],
-    videoUrl: "https://www.youtube.com/watch?v=MTbF89_R88I",
+    videoUrl: "https://www.youtube.com/watch?v=A7YR73ALZ1s",
     category: "scanning",
     difficulty: "beginner",
     estimatedMinutes: 10,
@@ -375,7 +375,7 @@ export const drills: Drill[] = [
       "Keep the ball within playing distance"
     ],
     equipment: ["Ball", "8-10 Cones"],
-    videoUrl: "https://www.youtube.com/watch?v=2bT8wPZ0dEE",
+    videoUrl: "https://www.youtube.com/watch?v=vnngDOCy9C8",
     category: "ball-mastery",
     difficulty: "beginner",
     estimatedMinutes: 8,

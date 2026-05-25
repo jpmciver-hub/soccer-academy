@@ -29,7 +29,7 @@ const concepts: Concept[] = [
       "When defending, squeeze the space and stay tight",
       "Goalkeeper acts as an extra outfield player in build-up",
     ],
-    videoUrl: "https://www.youtube.com/watch?v=fWkJFNQAfHg",
+    videoUrl: "https://www.youtube.com/watch?v=vb95htEzTvk",
   },
   {
     id: "build-out",
@@ -44,7 +44,7 @@ const concepts: Concept[] = [
       "If the press is tight, look for the switch or go long",
       "Body shape: always open to the field, never face your own goal",
     ],
-    videoUrl: "https://www.youtube.com/watch?v=YMpW0l-2gKs",
+    videoUrl: "https://www.youtube.com/watch?v=BjZ6oNk9Dnw",
   },
   {
     id: "defensive-compactness",
@@ -143,7 +143,7 @@ const concepts: Concept[] = [
       "In a game, scan every 3-4 seconds",
       "Practice: have someone hold up fingers behind you while you control a ball",
     ],
-    videoUrl: "https://www.youtube.com/watch?v=MTbF89_R88I",
+    videoUrl: "https://www.youtube.com/watch?v=FXG5ZRVyXVU",
   },
 ];
 
